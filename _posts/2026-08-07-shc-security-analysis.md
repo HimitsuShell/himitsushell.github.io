@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "shc 安全漏洞分析：Shell 脚本编译器的结构性局限"
+date: 2026-08-07 22:00:00
 ---
 [shc](https://github.com/neurobin/shc) 是目前最广为人知的 Shell 脚本保护工具。  
 它的原理是把 Shell 脚本包装成 C 源代码后编译成二进制文件，以此防止源代码泄露。
