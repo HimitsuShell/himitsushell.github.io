@@ -3,9 +3,8 @@ description: "Shell 脚本保护器（代码混淆、DRM）。技术文章、安
 url: "https://himitsushell.github.io"
 theme: minima
 lang: zh-CN
-author:
-  name: HimitsuShell
-  email: hjyun@mushsw.com
+author: HimitsuShell
+email: hjyun@mushsw.com
 
 show_excerpts: true
 github_username: HimitsuShell
