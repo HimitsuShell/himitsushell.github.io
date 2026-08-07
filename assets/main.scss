@@ -12,49 +12,43 @@ label[for="nav-trigger"] {
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
 $zh-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
-$code-font-stack: 'Fira Code', Consolas, Monaco, Menlo, "Courier New", monospace;
+$code-font-stack: 'Fira Code', Consolas, Monaco, Menlo, monospace;
 body, .post-content {
   font-family: $zh-font-stack !important;
   font-size: 15px;
   line-height: 1.7;
   color: #1f2328;
 }
-.post-list h3,
-.post-list .post-link {
-  font-size: 1.08rem !important;
-  line-height: 1.4 !important;
-  font-weight: 600 !important;
-}
-.post-title {
+.post-title,
+.post-content h1 {
   font-size: 1.15rem !important;
   line-height: 1.35 !important;
   font-weight: 600 !important;
   margin-bottom: 8px !important;
 }
 .post-content h1 {
-  font-size: 1.15rem !important;
   padding-bottom: 0.2em;
   border-bottom: 1px solid #d0d7de;
   margin-top: 1.2em;
-  margin-bottom: 10px;
-  font-weight: 600;
 }
 .post-content h2 {
-  font-size: 1.125rem !important;
+  font-size: 1.08rem !important;
   padding-bottom: 0.2em;
   border-bottom: 1px solid #d0d7de;
   margin-top: 1.1em;
   margin-bottom: 8px;
   font-weight: 600;
 }
-.post-content h3 {
-  font-size: 1.03rem !important;
+.post-content h3,
+.post-list h3,
+.post-list .post-link {
+  font-size: 1.02rem !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
   margin-top: 0.9em;
   margin-bottom: 6px;
-  font-weight: 600;
 }
 div.highlighter-rouge,
-div.highlighter-rouge div.highlight,
 div.highlighter-rouge pre.highlight,
 div.highlighter-rouge code {
   background-color: #f6f8fa !important;
@@ -65,7 +59,7 @@ div.highlighter-rouge pre.highlight {
   padding: 0.75rem 0.95rem !important;
   border-radius: 6px !important;
   border: 1px solid #d0d7de !important;
-  font-size: 0.88rem !important;
+  font-size: 0.82rem !important;
   line-height: 1.5 !important;
   overflow-x: auto !important;
   margin: 0.8em 0 !important;
@@ -76,7 +70,7 @@ p code, li code {
   padding: 0.15em 0.35em !important;
   border-radius: 4px !important;
   font-family: $code-font-stack !important;
-  font-size: 0.8em !important;
+  font-size: 0.82em !important;
 }
 .post-content blockquote {
   padding: 0 0.8em;
@@ -89,19 +83,19 @@ p code, li code {
   border-collapse: collapse;
   margin: 0.8em 0;
   width: 100%;
+  th, td {
+    padding: 5px 12px;
+    border: 1px solid #d0d7de;
+  }
+  tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
 }
-.post-content table th,
-.post-content table td {
-  padding: 5px 12px;
-  border: 1px solid #d0d7de;
-}
-.post-content table tr:nth-child(2n) {
-  background-color: #f6f8fa;
-}
-.post-content ul, .post-content ol {
+.post-content ul, 
+.post-content ol {
   padding-left: 1.8em;
   margin: 0.4em 0;
-}
-.post-content li + li {
-  margin-top: 0.2em;
+  li + li {
+    margin-top: 0.2em;
+  }
 }
