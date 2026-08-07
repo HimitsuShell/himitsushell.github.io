@@ -1,13 +1,16 @@
 title: HimitsuShell
-description: Shell 脚本保护器（代码混淆、DRM）。技术文章、安全分析。
+description: "Shell 脚本保护器（代码混淆、DRM）。技术文章、安全分析。"
 url: "https://himitsushell.github.io"
 theme: minima
 lang: zh-CN
-author: HimitsuShell
+author:
+  name: HimitsuShell
+  email: hjyun@mushsw.com
 
 show_excerpts: true
 github_username: HimitsuShell
 
 plugins:
+  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
