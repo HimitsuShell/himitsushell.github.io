@@ -19,6 +19,12 @@ body, .post-content {
   line-height: 1.7;
   color: #1f2328;
 }
+.post-list h3,
+.post-list .post-link {
+  font-size: 1.08rem !important;
+  line-height: 1.4 !important;
+  font-weight: 600 !important;
+}
 .post-title {
   font-size: 1.15rem !important;
   line-height: 1.35 !important;
@@ -59,8 +65,8 @@ div.highlighter-rouge pre.highlight {
   padding: 0.75rem 0.95rem !important;
   border-radius: 6px !important;
   border: 1px solid #d0d7de !important;
-  font-size: 0.81rem !important;
-  line-height: 1.45 !important;
+  font-size: 0.88rem !important;
+  line-height: 1.5 !important;
   overflow-x: auto !important;
   margin: 0.8em 0 !important;
 }
@@ -70,7 +76,7 @@ p code, li code {
   padding: 0.15em 0.35em !important;
   border-radius: 4px !important;
   font-family: $code-font-stack !important;
-  font-size: 0.82em !important;
+  font-size: 0.8em !important;
 }
 .post-content blockquote {
   padding: 0 0.8em;
