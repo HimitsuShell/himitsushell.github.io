@@ -49,28 +49,27 @@ body, .post-content {
   margin-bottom: 6px;
 }
 div.highlighter-rouge,
-div.highlighter-rouge pre.highlight,
-div.highlighter-rouge code {
+div.highlighter-rouge * {
+  font-family: $code-font-stack !important;
   background-color: #f6f8fa !important;
   color: #24292f !important;
-  font-family: $code-font-stack !important;
 }
 div.highlighter-rouge pre.highlight {
   padding: 0.75rem 0.95rem !important;
   border-radius: 6px !important;
   border: 1px solid #d0d7de !important;
-  font-size: 0.82rem !important;
+  font-size: 14px !important;
   line-height: 1.5 !important;
   overflow-x: auto !important;
   margin: 0.8em 0 !important;
 }
 p code, li code {
+  font-family: $code-font-stack !important;
   background-color: rgba(175, 184, 193, 0.2) !important;
   color: #24292f !important;
   padding: 0.15em 0.35em !important;
   border-radius: 4px !important;
-  font-family: $code-font-stack !important;
-  font-size: 0.82em !important;
+  font-size: 14px !important;
 }
 .post-content blockquote {
   padding: 0 0.8em;
