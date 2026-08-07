@@ -1,44 +1,69 @@
 ---
 ---
 @import "minima";
-.footer-heading {
-  display: none !important;
-}
+.footer-heading,
 .rss-subscribe,
-.feed-subscribe {
-  display: none !important;
-}
+.feed-subscribe,
 .site-nav .menu-icon,
 label[for="nav-trigger"] {
   display: none !important;
 }
 
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css');
-body {
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+$code-font: 'JetBrains Mono', Consolas, Monaco, monospace;
+body, .post-content {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif !important;
-  color: #1f2328;
-  line-height: 1.6;
-}
-.post-content {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif !important;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
   color: #1f2328;
 }
-.post-content h1,
-.post-content h2 {
+.post-content h1 {
+  font-size: 1.4rem !important;
   padding-bottom: 0.3em;
-  border-bottom: 1px solid #hsla(210,18%,87%,1);
   border-bottom: 1px solid #d0d7de;
-  margin-top: 1.5em;
-  margin-bottom: 16px;
+  margin-top: 1.4em;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+.post-content h2 {
+  font-size: 1.2rem !important;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #d0d7de;
+  margin-top: 1.2em;
+  margin-bottom: 10px;
   font-weight: 600;
 }
 .post-content h3 {
-  margin-top: 1.2em;
-  margin-bottom: 12px;
+  font-size: 1.05rem !important;
+  margin-top: 1em;
+  margin-bottom: 8px;
   font-weight: 600;
+}
+div.highlighter-rouge,
+div.highlighter-rouge div.highlight,
+div.highlighter-rouge pre.highlight,
+div.highlighter-rouge code {
+  background-color: #f6f8fa !important;
+  color: #24292f !important;
+  font-family: $code-font !important;
+}
+div.highlighter-rouge pre.highlight {
+  padding: 0.9rem 1.1rem !important;
+  border-radius: 6px !important;
+  border: 1px solid #d0d7de !important;
+  font-size: 0.85rem !important;
+  line-height: 1.55 !important;
+  overflow-x: auto !important;
+  margin: 1em 0 !important;
+}
+p code, li code {
+  background-color: rgba(175, 184, 193, 0.2) !important;
+  color: #24292f !important;
+  padding: 0.2em 0.4em !important;
+  border-radius: 6px !important;
+  font-family: $code-font !important;
+  font-size: 0.85em !important;
 }
 .post-content blockquote {
   padding: 0 1em;
@@ -60,8 +85,7 @@ body {
 .post-content table tr:nth-child(2n) {
   background-color: #f6f8fa;
 }
-.post-content ul,
-.post-content ol {
+.post-content ul, .post-content ol {
   padding-left: 2em;
   margin: 0.5em 0;
 }
