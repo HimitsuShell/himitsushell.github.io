@@ -9,10 +9,6 @@ email: hjyun@mushsw.com
 show_excerpts: true
 github_username: HimitsuShell
 
-kramdown:
-  syntax_highlighter_opts:
-    theme: github
-
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
