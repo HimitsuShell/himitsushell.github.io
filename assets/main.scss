@@ -11,8 +11,8 @@ label[for="nav-trigger"] {
 
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap');
-$zh-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
-$code-font-stack: 'Fira Code', Consolas, Monaco, Menlo, monospace;
+$code-font-stack: 'Fira Code', monospace;
+$zh-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 body, .post-content {
   font-family: $zh-font-stack !important;
   font-size: 15px;
@@ -63,7 +63,7 @@ div.highlighter-rouge pre.highlight {
   overflow-x: auto !important;
   margin: 0.8em 0 !important;
 }
-p code, li code {
+p code, li code, pre code {
   font-family: $code-font-stack !important;
   background-color: rgba(175, 184, 193, 0.2) !important;
   color: #24292f !important;
