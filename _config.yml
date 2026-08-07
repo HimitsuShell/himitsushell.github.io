@@ -5,6 +5,9 @@ theme: minima
 lang: zh-CN
 author: HimitsuShell
 
+show_excerpts: true
+github_username: HimitsuShell
+
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
