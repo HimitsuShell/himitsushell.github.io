@@ -10,3 +10,8 @@
 .feed-subscribe {
   display: none !important;
 }
+
+.site-nav .menu-icon,
+label[for="nav-trigger"] {
+  display: none !important;
+}
