@@ -1,6 +1,5 @@
 ---
 layout: lang-home
-list_title: " "
 lang: en
 permalink: /en/
 title: "HimitsuShell English Blog"

@@ -1,6 +1,5 @@
 ---
 layout: lang-home
-list_title: " "
 lang: ko
 permalink: /ko/
 title: "HimitsuShell 한국어 블로그"

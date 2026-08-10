@@ -1,6 +1,5 @@
 ---
 layout: lang-home
-list_title: " "
 lang: zh
 permalink: /zh/
 title: "HimitsuShell 中文博客"
