@@ -1,6 +1,5 @@
 ---
 layout: default
-post_title: " "
 ---
 
 ### Select language

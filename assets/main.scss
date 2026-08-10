@@ -16,7 +16,11 @@
 :lang(ko) pre, :lang(ko) code,
 :lang(ja) pre, :lang(ja) code,
 :lang(zh) pre, :lang(zh) code {
-  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important;
+  font-family: ui-monospace, 
+               "Cascadia Code", "Cascadia Mono", 
+               "SF Mono", "SFMono-Regular", 
+               Menlo, Monaco, Consolas, 
+               "Liberation Mono", monospace !important;
 }
 
 .footer-heading,
