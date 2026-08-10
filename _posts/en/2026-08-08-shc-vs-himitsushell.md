@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Comparing Shell Script Protection Tools: shc vs HimitsuShell (Binary Compilation, Encryption, and Obfuscation)"
-date: 2026-08-10 17:30:00 +0900
-lang: en
 ---
+
 [shc](https://github.com/neurobin/shc/tree/master) (a shell script compiler) is a tool that converts shell scripts into binaries to prevent source code exposure. However, it has the following limitations in real-world use:
 - It provides no obfuscation, which leaves it vulnerable to reverse engineering.
 - It depends on the system shell (e.g., /bin/sh), which leaves it vulnerable to logging/hooking attacks.
