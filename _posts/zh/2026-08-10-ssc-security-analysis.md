@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Linux Shell 脚本安全：ssc 的结构性局限与漏洞（源代码保护、混淆、逆向工程）"
-date: 2026-08-07 22:30:00 +0900
-lang: zh
 ---
 
 [ssc](https://github.com/liberize/ssc) 是在 shc(Shell 脚本编译器)基础上改进而来的项目。  
