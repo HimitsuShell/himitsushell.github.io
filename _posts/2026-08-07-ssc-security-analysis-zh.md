@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ssc 安全漏洞分析：Shell 脚本编译器的结构性局限"
+title: "Linux Shell 脚本安全：ssc 的结构性局限与漏洞（源代码保护、混淆、逆向工程）"
 date: 2026-08-07 22:30:00 +0900
 lang: zh
 categories: [zh]

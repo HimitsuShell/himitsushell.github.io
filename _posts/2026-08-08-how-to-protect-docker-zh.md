@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "保护 Docker 镜像中源代码的方法(DRM、混淆)"
+title: "Docker 镜像与容器源代码保护方法（Python、C/C++、Shell 脚本、LLVM 混淆、DRM）"
 date: 2026-08-08 10:30:00 +0900
 lang: zh
 categories: [zh]

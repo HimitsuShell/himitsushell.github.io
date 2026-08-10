@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Shell 脚本保护工具对比：shc vs HimitsuShell"
+title: "Shell 脚本保护工具对比：shc 与 HimitsuShell（二进制化、加密、混淆）"
 date: 2026-08-07 12:00:00 +0900
 lang: zh
 categories: [zh]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "shc 安全漏洞分析：Shell 脚本编译器的结构性局限"
+title: "Shell 脚本安全：shc 的结构性局限与漏洞（加密、编译器、混淆）"
 date: 2026-08-07 22:00:00 +0900
 lang: zh
 categories: [zh]
