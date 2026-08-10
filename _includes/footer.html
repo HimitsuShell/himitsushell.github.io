@@ -26,7 +26,9 @@
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>{{- page.footer_text | default: site.description | escape -}}</p>
+        {% assign current_lang = page.lang | default: site.lang %}
+        {% assign dynamic_footer = site.footer_text[current_lang] %}
+        <p>{{- dynamic_footer | escape -}}</p>
       </div>
     </div>
 
