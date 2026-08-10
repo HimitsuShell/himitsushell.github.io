@@ -7,7 +7,7 @@ title: "리눅스 쉘 스크립트 보안: ssc의 구조적 한계와 취약점 
 shc와 같은 원리로, 쉘 스크립트를 C 소스코드로 감싼 뒤 바이너리로 변환하여 코드 노출을 막는다.
 
 ssc는 shc와 달리 시스템 쉘에 의존하지 않고, 별도의 쉘 인터프리터(예: BusyBox)를 사용한다.  
-따라서 [shc를 공격할때 사용했던 기법(auditd)](https://himitsushell.github.io/ko/2026/08/10/shc-security-analysis-ko/)은 ssc에서는 동일하게 사용할 수 없다.
+따라서 [shc를 공격할때 사용했던 기법(auditd)](https://himitsushell.github.io/ko/shc-security-analysis/)은 ssc에서는 동일하게 사용할 수 없다.
 
 그러나 ssc 역시 구조적인 한계를 가지고 있다.  
 ssc로 생성된 바이너리는 내장된 쉘 인터프리터(예: BusyBox)를 잠시 /tmp/ssc.XXXXXX/busybox 경로에 내보내고, 이곳에 쉘 스크립트를 전달하여 실행한다.  

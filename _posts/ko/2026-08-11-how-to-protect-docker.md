@@ -29,7 +29,7 @@ COPY --from=builder /var/work/public.txt .
 
 ### 2.1 쉘 스크립트 난독화, DRM 적용
 쉘 스크립트 보호 도구 중 가장 널리 알려진 것은 shc입니다.  
-하지만 shc는 [이전 글](https://himitsushell.github.io/ko/2026/08/10/shc-security-analysis-ko/)에서 분석한 것처럼 치명적인 취약점이 존재합니다.  
+하지만 shc는 [이전 글](https://himitsushell.github.io/ko/shc-security-analysis/)에서 분석한 것처럼 치명적인 취약점이 존재합니다.  
 shc의 취약점을 보완한 HimitsuShell을 사용해보겠습니다.
 
 ```shell
