@@ -1,7 +1,8 @@
 ---
-layout: page
+layout: default
 post_title: " "
 ---
+
 ### Select language
 
 - [English](/en/)
