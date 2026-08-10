@@ -3,6 +3,7 @@ description: "shell script protector (llvm obfuscation, embedded interpreter, an
 url: "https://himitsushell.github.io"
 permalink: /:categories/:year/:month/:day/:title/
 theme: minima
+timezone: Asia/Seoul
 lang: en
 author: HimitsuShell
 email: hjyun@mushsw.com
