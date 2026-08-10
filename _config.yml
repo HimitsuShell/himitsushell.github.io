@@ -1,20 +1,13 @@
 title: HimitsuShell Blog
 description: "shell script protector (llvm obfuscation, embedded interpreter, anti-tamper, DRM). technical articles, security analysis, shc alternative"
 url: "https://himitsushell.github.io"
+permalink: /:categories/:year/:month/:day/:title/
 theme: minima
 lang: en
 author: HimitsuShell
 email: hjyun@mushsw.com
-
 show_excerpts: true
 github_username: HimitsuShell
-
-permalink: /:categories/:year/:month/:day/:title/
-header_pages:
-  - en.md
-  - zh.md
-  - ja.md
-  - ko.md
 
 plugins:
   - jekyll-feed
