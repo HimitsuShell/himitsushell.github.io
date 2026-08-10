@@ -16,14 +16,10 @@ footer_text:
 lang: en
 permalink: /:categories/:title/
 defaults:
-  - scope: { path: "_posts/en" }
-    values: { categories: en, lang: en }
-  - scope: { path: "_posts/zh" }
-    values: { categories: zh, lang: zh }
-  - scope: { path: "_posts/ja" }
-    values: { categories: ja, lang: ja }
-  - scope: { path: "_posts/ko" }
-    values: { categories: ko, lang: ko }
+  - {scope: {path: "_posts/en"}, values: {categories: en, lang: en}}
+  - {scope: {path: "_posts/zh"}, values: {categories: zh, lang: zh}}
+  - {scope: {path: "_posts/ja"}, values: {categories: ja, lang: ja}}
+  - {scope: {path: "_posts/ko"}, values: {categories: ko, lang: ko}}
 
 plugins:
   - jekyll-feed
