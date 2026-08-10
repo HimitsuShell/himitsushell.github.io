@@ -2,6 +2,8 @@
 layout: post
 title: "ssc 安全漏洞分析：Shell 脚本编译器的结构性局限"
 date: 2026-08-07 22:30:00 +0900
+lang: zh
+categories: [zh]
 ---
 
 [ssc](https://github.com/liberize/ssc) 是在 shc(Shell 脚本编译器)基础上改进而来的项目。  
