@@ -3,7 +3,6 @@ layout: post
 title: "Docker 镜像与容器源代码保护方法（Python、C/C++、Shell 脚本、LLVM 混淆、DRM）"
 date: 2026-08-08 10:30:00 +0900
 lang: zh
-categories: [zh]
 ---
 Docker 镜像中的源代码和可执行文件，默认情况下任何人都可以查看和使用。  
 不过有几种方法可以防止他人查看 Docker 镜像中的源代码，让只有获得授权的人才能使用。

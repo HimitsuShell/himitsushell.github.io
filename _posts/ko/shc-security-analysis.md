@@ -3,7 +3,6 @@ layout: post
 title: "쉘 스크립트 보안: shc의 구조적 한계와 취약점 (암호화, 컴파일러, 난독화)"
 date: 2026-08-10 12:00:00 +0900
 lang: ko
-categories: [ko]
 ---
 
 [shc](https://github.com/neurobin/shc)는 가장 널리 알려진 쉘 스크립트 보호 도구다.  

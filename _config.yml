@@ -1,7 +1,7 @@
 title: HimitsuShell Blog
 description: "shell script protector (llvm obfuscation, embedded interpreter, anti-tamper, DRM). technical articles, security analysis, shc alternative"
 url: "https://himitsushell.github.io"
-permalink: /:categories/:year/:month/:day/:title/
+permalink: /:categories/:title/
 theme: minima
 timezone: Asia/Seoul
 lang: en

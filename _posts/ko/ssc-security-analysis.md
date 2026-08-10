@@ -3,7 +3,6 @@ layout: post
 title: "리눅스 쉘 스크립트 보안: ssc의 구조적 한계와 취약점 (소스코드 보호, 난독화, 역공학)"
 date: 2026-08-10 12:10:00 +0900
 lang: ko
-categories: [ko]
 ---
 
 [ssc](https://github.com/liberize/ssc)는 shc(쉘 스크립트 컴파일러)를 개선한 프로젝트다.  

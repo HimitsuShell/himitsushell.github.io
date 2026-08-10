@@ -3,7 +3,6 @@ layout: post
 title: "Shell Script Security: Structural Limitations and Vulnerabilities of shc (Encryption, Compiler, Obfuscation)"
 date: 2026-08-11 05:00:00 +0900
 lang: en
-categories: [en]
 ---
 
 [shc](https://github.com/neurobin/shc) is the most widely known shell script protection tool.  

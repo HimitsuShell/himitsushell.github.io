@@ -3,7 +3,6 @@ layout: post
 title: "쉘 스크립트 보호 도구 비교: shc vs HimitsuShell (바이너리화, 암호화, 난독화)"
 date: 2026-08-10 11:00:00 +0900
 lang: ko
-categories: [ko]
 ---
 [shc](https://github.com/neurobin/shc/tree/master)(쉘 스크립트 컴파일러)는 쉘 스크립트를 바이너리로 변환하여 코드 유출을 막는 도구다. 하지만 실제 사용에는 다음과 같은 한계가 존재한다.
 - 난독화 기능을 제공하지 않아, 리버스 엔지니어링에 취약하다.

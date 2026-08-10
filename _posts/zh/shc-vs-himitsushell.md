@@ -3,7 +3,6 @@ layout: post
 title: "Shell 脚本保护工具对比：shc 与 HimitsuShell（二进制化、加密、混淆）"
 date: 2026-08-07 12:00:00 +0900
 lang: zh
-categories: [zh]
 ---
 
 [shc](https://github.com/neurobin/shc/tree/master)（Shell 脚本编译器）是一款将 Shell 脚本转换为二进制文件、防止代码泄露的工具。但在实际使用中存在以下局限性。
