@@ -3,24 +3,21 @@
 @import "minima";
 :lang(ko) {
   font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
-    "Malgun Gothic", "Noto Sans KR", sans-serif !important;
+    "Malgun Gothic", "Noto Sans KR", sans-serif;
 }
 :lang(ja) {
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif !important;
+    "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
 }
 :lang(zh) {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-    "Microsoft YaHei", "Noto Sans SC", sans-serif !important;
+    "Microsoft YaHei", "Noto Sans SC", sans-serif;
 }
-:lang(ko) pre, :lang(ko) code,
-:lang(ja) pre, :lang(ja) code,
-:lang(zh) pre, :lang(zh) code {
+code, pre {
   font-family: ui-monospace, 
-               "Cascadia Code", "Cascadia Mono", 
-               "SF Mono", "SFMono-Regular", 
-               Menlo, Monaco, Consolas, 
-               "Liberation Mono", monospace !important;
+               "Cascadia Code", "SF Mono", Menlo, Monaco, Consolas,
+               "D2Coding", "Nanum Gothic Coding", "Noto Sans Mono CJK KR",
+               monospace;
 }
 
 .footer-heading,
