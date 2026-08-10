@@ -1,10 +1,8 @@
 title: HimitsuShell Blog
 description: "shell script protector (llvm obfuscation, embedded interpreter, anti-tamper, DRM). technical articles, security analysis, shc alternative"
 url: "https://himitsushell.github.io"
-permalink: /:categories/:title/
 theme: minima
 timezone: Asia/Seoul
-lang: en
 author: HimitsuShell
 email: hjyun@mushsw.com
 show_excerpts: true
@@ -14,6 +12,18 @@ footer_text:
   zh: "Shell 脚本安全解决方案（基于 LLVM 的代码混淆、内置解释器、防篡改与 DRM）。技术文档、安全分析、传统 shc 替代品"
   ja: "シェルスクリプト保護ソリューション（LLVMベースの難読化、内蔵インタプリタ、改ざん防止およびDRM）。技術ドキュメント、セキュリティ分析、従来のshc代替ソリューション"
   ko: "쉘 스크립트 보안 솔루션 (LLVM 기반 난독화, 내장 인터프리터, 위변조 방지 및 DRM). 기술 아티클, 보안 분석, 기존 shc 대체재"
+
+lang: en
+permalink: /:categories/:title/
+defaults:
+  - scope: { path: "_posts/en" }
+    values: { categories: en, lang: en }
+  - scope: { path: "_posts/zh" }
+    values: { categories: zh, lang: zh }
+  - scope: { path: "_posts/ja" }
+    values: { categories: ja, lang: ja }
+  - scope: { path: "_posts/ko" }
+    values: { categories: ko, lang: ko }
 
 plugins:
   - jekyll-feed
