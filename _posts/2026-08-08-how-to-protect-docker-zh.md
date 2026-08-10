@@ -32,7 +32,7 @@ COPY --from=builder /var/work/public.txt .
 ### 2.1 Shell 脚本混淆与 DRM 应用
 
 在 Shell 脚本保护工具中，最广为人知的是 shc。  
-但正如[上一篇文章](https://himitsushell.github.io/2026/08/07/shc-security-analysis.html)中分析的那样，shc 存在致命的安全漏洞。  
+但正如[上一篇文章](https://himitsushell.github.io/zh/2026/08/07/shc-security-analysis-zh/)中分析的那样，shc 存在致命的安全漏洞。  
 接下来我们使用弥补了 shc 漏洞的 HimitsuShell 来试一下。
 
 ```shell

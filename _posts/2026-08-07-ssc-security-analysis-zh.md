@@ -10,7 +10,7 @@ categories: [zh]
 其原理与 shc 相同，都是先将 Shell 脚本包装成 C 源代码，再编译为二进制文件，从而防止源码暴露。
 
 与 shc 不同的是，ssc 不依赖系统 Shell，而是使用独立的 Shell 解释器(例如 BusyBox)。  
-因此，[攻击 shc 时所使用的技术(auditd)](https://himitsushell.github.io/2026/08/07/shc-security-analysis.html)在 ssc 上无法同样奏效。
+因此，[攻击 shc 时所使用的技术(auditd)](https://himitsushell.github.io/zh/2026/08/07/shc-security-analysis-zh/)在 ssc 上无法同样奏效。
 
 但 ssc 同样存在结构性的局限。  
 由 ssc 生成的二进制文件，会将内置的 Shell 解释器(例如 BusyBox)临时导出到 /tmp/ssc.XXXXXX/busybox 路径下，再将 Shell 脚本传递到该路径执行。  

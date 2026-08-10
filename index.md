@@ -1,6 +1,6 @@
 ---
 layout: page
-list_title: " "
+post_title: " "
 ---
 ### Select language
 
