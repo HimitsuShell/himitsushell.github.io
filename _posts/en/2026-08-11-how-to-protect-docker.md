@@ -8,7 +8,7 @@ There are a few ways to keep others from viewing the source code inside a Docker
 
 ## 1. Multi-Stage Builds
 This is a built-in image-building feature provided by Docker.  
-You can select specific files from a previous stage and copy only those into the current layer.  
+You can select specific files from a previous stage and copy only those into the current stage.  
 Files you don't specify aren't included in the final image, which reduces image size and keeps unnecessary files from being exposed to others.
 
 ```shell
