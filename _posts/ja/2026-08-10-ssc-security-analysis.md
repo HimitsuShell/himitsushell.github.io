@@ -1,21 +1,21 @@
 ---
 layout: post
-title: "Linuxシェルスクリプトのセキュリティ:sscの構造的限界と脆弱性(ソースコード保護、難読化、リバースエンジニアリング)"
+title: "Linuxシェルスクリプトのセキュリティ: sscの構造的限界と脆弱性(ソースコード保護、難読化、リバースエンジニアリング)"
 ---
 
 [ssc](https://github.com/liberize/ssc)は、shc(シェルスクリプトコンパイラ)を改良したプロジェクトである。  
 shcと同じ原理で、シェルスクリプトをCのソースコードでラップした後にバイナリへ変換し、コードの露出を防ぐ。
 
-sscはshcとは異なり、システムシェルに依存せず、独自のシェルインタプリタ(例:BusyBox)を使用する。  
-そのため、[shcを攻撃する際に使用した手法(auditd)](https://himitsushell.github.io/ja/shc-security-analysis/)は、sscには同様の手法が通用しない。
+sscはshcとは異なり、システムシェルに依存せず、独自のシェルインタプリタ(例: BusyBox)を使用する。  
+そのため、[shcを攻撃する際に使用した手法(auditd)](https://himitsushell.github.io/ja/shc-security-analysis/)は、sscには通用しない。
 
 しかし、sscもまた構造的な限界を抱えている。  
-sscによって生成されたバイナリは、内蔵されたシェルインタプリタ(例:BusyBox)を一時的に/tmp/ssc.XXXXXX/busyboxのパスに展開し、それにシェルスクリプトを渡して実行する。  
+sscによって生成されたバイナリは、内蔵されたシェルインタプリタ(例: BusyBox)を一時的に/tmp/ssc.XXXXXX/busyboxのパスに展開し、それにシェルスクリプトを渡して実行する。  
 **したがって、内蔵されたシェルインタプリタが外部に露出する瞬間だけを監視すれば、シェルスクリプトを窃取することができる。**
 
 ![sscの脆弱性の構造図](/assets/images/ssc-security-analysis/1.png)
 
-それでは実際にテストして脆弱性を確認してみよう
+それでは実際にテストして脆弱性を確認してみよう。
 
 ## テスト環境
 Ubuntu 24.04で、以下のシェルスクリプトを使用する。

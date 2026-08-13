@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Docker イメージ・コンテナのソースコード保護方法（Python、C/C++、シェルスクリプト、LLVM難読化、DRM）"
+title: "Docker イメージ・コンテナのソースコード保護方法(Python、C/C++、シェルスクリプト、LLVM難読化、DRM)"
 ---
 
 Dockerイメージの中にあるソースコードや実行ファイルは、基本的に誰でも見て使うことができます。  
@@ -25,7 +25,7 @@ COPY --from=builder /var/work/public.txt .
 ## 2. ファイル形式ごとの難読化・DRM適用
 上記のようにマルチステージビルドを使えば、Dockerイメージ内で露出するファイルの多くを隠すことができます。  
 しかし、マルチステージビルドの構造上、最終ステージに含まれるファイルはそのまま残ってしまいます。  
-最終ステージでは、各ファイル（シェルスクリプト、C/C++プログラムなど）の形式に合わせて、個別の難読化やDRM技術を適用する必要があります。
+最終ステージでは、各ファイル(シェルスクリプト、C/C++プログラムなど)の形式に合わせて、個別の難読化やDRM技術を適用する必要があります。
 
 ### 2.1 シェルスクリプトの難読化・DRM適用
 シェルスクリプト保護ツールの中で最も広く知られているのはshcです。  
@@ -68,14 +68,14 @@ python dist/foo.py
 ```
 
 ### 2.3 C/C++、Objective-C/C++、Swift、Rust、Zig、Kotlin/Nativeなど
-LLVMベースの難読化ツールを使えば、C/C++やObjective-Cなど多様な言語を、商用ツール（VMProtect、Enigma Protectorなど）と同等のレベルまで難読化することができます。  
+LLVMベースの難読化ツールを使えば、C/C++やObjective-Cなど多様な言語を、商用ツール(VMProtect、Enigma Protectorなど)と同等のレベルまで難読化することができます。  
 C/C++コードを例に、HimitsuObfuscatorを使ってみましょう。
 
 |難読化ツール|LLVMバージョン|ライセンス|商用利用|メンテナンス|特徴|
 |---|---|---|---|---|---|
 |OLLVM|4|UIUC/NCSA|許可|2017年に開発停止|LLVM難読化ツールの出発点|
 |Hikari Obfuscator|8|改変されたAGPLv3|制限付きで許可|2020年に開発停止|OLLVM以降の先進的な難読化技術を適用|
-|Himitsu Obfuscator|17|MIT|許可|継続中|OLLVMのバグ改善、難読化範囲の拡張|
+|Himitsu Obfuscator|17|MIT|許可|継続中|OLLVMのバグ修正、難読化範囲の拡張|
 
 ```shell
 # Required: Ubuntu 24.04
