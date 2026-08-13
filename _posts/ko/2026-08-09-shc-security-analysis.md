@@ -28,16 +28,16 @@ shc -Uf launcher.sh -o shc_binary
 
 ## 테스트 방법
 ```shell
-# auditd 설치
+# Install auditd
 sudo apt install auditd -y
 
-# 모니터링 규칙 등록
+# Register monitoring rule
 sudo auditctl -a exit,always -F arch=b64 -S execve
 
-# shc_binary 실행
+# Run the shc binary
 ./shc_binary
 
-# 로그 확인
+# Check logs
 sudo ausearch -i -sc execve | grep "shc_binary" -A 100
 ```
 

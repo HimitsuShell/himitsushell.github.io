@@ -30,13 +30,13 @@ ubuntu 24.04에서 아래 쉘 스크립트를 사용한다.
 
 ## 테스트 방법
 ```shell
-# bpftrace 설치
+# Install bpftrace
 sudo apt install bpftrace
 
-# 터미널1에서 모니터링 시작
+# Start monitoring in terminal 1
 sudo bpftrace -e 'tracepoint:syscalls:sys_enter_write /comm == "ssc_binary"/ { printf("PID: %d | FD: %d | Data: %s\n", pid, args->fd, str(args->buf)); }'
 
-# 터미널2에서 ssc_binary 실행
+# Run ssc_binary in terminal 2
 ./ssc_binary
 ```
 

@@ -28,16 +28,16 @@ shc -Uf launcher.sh -o shc_binary
 
 ## 测试方法
 ```shell
-# 安装 auditd
+# Install auditd
 sudo apt install auditd -y
 
-# 注册监控规则
+# Register monitoring rule
 sudo auditctl -a exit,always -F arch=b64 -S execve
 
-# 运行 shc_binary
+# Run the shc binary
 ./shc_binary
 
-# 查看日志
+# Check logs
 sudo ausearch -i -sc execve | grep "shc_binary" -A 100
 ```
 

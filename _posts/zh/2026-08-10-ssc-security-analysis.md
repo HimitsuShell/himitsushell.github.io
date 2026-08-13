@@ -29,15 +29,14 @@ title: "Linux Shell 脚本安全：ssc 的结构性局限与漏洞（源代码�
 ```
 
 ## 测试方法
-
 ```shell
-# 安装 bpftrace
+# Install bpftrace
 sudo apt install bpftrace
 
-# 在终端1中开始监控
+# Start monitoring in terminal 1
 sudo bpftrace -e 'tracepoint:syscalls:sys_enter_write /comm == "ssc_binary"/ { printf("PID: %d | FD: %d | Data: %s\n", pid, args->fd, str(args->buf)); }'
 
-# 在终端2中执行 ssc_binary
+# Run ssc_binary in terminal 2
 ./ssc_binary
 ```
 
