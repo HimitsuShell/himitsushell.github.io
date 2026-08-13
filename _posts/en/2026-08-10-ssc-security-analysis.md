@@ -18,11 +18,11 @@ A binary built with ssc briefly drops the embedded shell interpreter (e.g., Busy
 Let's test this directly and confirm the vulnerability.
 
 ## Test Environment
-We'll use the shell script below on ubuntu 24.04.
+The following shell script was tested on Ubuntu 24.04.
 
 ![Test shell script](/assets/images/ssc-security-analysis/2.png)
 
-We'll proceed with the [shell interpreter (BusyBox) embedded](https://github.com/liberize/ssc/tree/master/examples/4_embed_interpreter) as shown below.
+We'll build the binary with the [shell interpreter (BusyBox) embedded](https://github.com/liberize/ssc/tree/master/examples/4_embed_interpreter), as shown below.
 
 ```shell
 ./ssc test ssc_binary -s -r -e busybox -c
@@ -40,7 +40,7 @@ sudo bpftrace -e 'tracepoint:syscalls:sys_enter_write /comm == "ssc_binary"/ { p
 ./ssc_binary
 ```
 
-**As shown in the red box in the image below, bpftrace (kernel tracing tool) makes it easy to capture the shell script.**
+**As shown in the red box in the image below, bpftrace (a kernel tracing tool) makes it easy to capture the shell script.**
 
 ![Terminal 2 monitoring result](/assets/images/ssc-security-analysis/3.png)
 

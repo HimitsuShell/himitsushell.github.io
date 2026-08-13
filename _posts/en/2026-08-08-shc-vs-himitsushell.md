@@ -12,7 +12,7 @@ title: "Comparing Shell Script Protection Tools: shc vs HimitsuShell (Binary Com
 Now let's walk through the comparison item by item.
 
 ## Test Environment
-The following shell script is used on Ubuntu 24.04.
+The following shell script was tested on Ubuntu 24.04.
 
 ![Test shell script](/assets/images/shc-vs-himitsushell/1.png)
 
@@ -93,7 +93,7 @@ As shown above, there's a clear difference in security strength between shc and 
 
 ## Additional Comparison
 There's also [ssc](https://github.com/liberize/ssc), which improves on shc.  
-It addresses some of the issues (dynamic library hooking defense, string obfuscation), but still has limitations around advanced obfuscation and OS-level logging/hooking defense.
+It addresses some of the issues (protection against dynamic library hooking, string obfuscation), but still has limitations around advanced obfuscation and protection against OS-level logging/hooking.
 
 **Notably, while ssc doesn't depend on the system shell, at runtime it extracts the interpreter (e.g., /bin/sh) to the path /tmp/ssc/XXXXXX and passes the shell script to it. This means logging or hooking that path leaves the shell script vulnerable to extraction.**
 

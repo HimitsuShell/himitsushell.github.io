@@ -16,11 +16,11 @@ A binary built with shc runs the shell script by passing it to the system shell 
 Let's actually test this and confirm the vulnerability.
 
 ## Test Environment
-The following shell script is used on ubuntu 24.04.
+The following shell script was tested on Ubuntu 24.04.
 
 ![Shell script used for testing](/assets/images/shc-security-analysis/2.png)
 
-Proceed with [maximum security strength](https://github.com/neurobin/shc/blob/master/man.md) as shown below.
+Build the binary at [maximum security level](https://github.com/neurobin/shc/blob/master/man.md) as shown below.
 
 ```shell
 shc -Uf launcher.sh -o shc_binary
