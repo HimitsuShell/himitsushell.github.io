@@ -63,13 +63,13 @@ HimitsuShell 对字符串进行了混淆处理，而 shc 生成的二进制文�
 HimitsuShell 经过混淆处理后，控制流几乎无法被识别。  
 相反，shc 的控制流较为简单，容易被分析。
 
-## 操作系统层面的日志记录/挂钩
-![日志记录、挂钩检测 1](/assets/images/shc-vs-himitsushell/11.png)
+## 操作系统层面的日志记录/挂钩防护
+![日志记录/挂钩检测 1](/assets/images/shc-vs-himitsushell/11.png)
 
 使用 auditd 监控 shc 生成的二进制文件的系统调用（如 execve）时，可以看到 Shell 脚本内容被完整记录下来。  
 由于其结构依赖系统 Shell，因此容易受到操作系统层面的日志记录/挂钩攻击。  
 
-![日志记录、挂钩检测 2](/assets/images/shc-vs-himitsushell/12.png)
+![日志记录/挂钩检测 2](/assets/images/shc-vs-himitsushell/12.png)
 
 相反，在相同条件下，HimitsuShell 生成的二进制文件不会记录 Shell 脚本内容。  
 这是因为它不依赖系统 Shell，而是使用内置在二进制文件中的 Shell。
@@ -90,6 +90,6 @@ HimitsuShell 经过混淆处理后，控制流几乎无法被识别。
 还有一个对 shc 进行改进的项目，叫 [ssc](https://github.com/liberize/ssc)。  
 它在部分方面有所改善（如动态库挂钩防护、字符串混淆），但在高级混淆和操作系统层面的日志记录/挂钩防护方面仍存在局限性。
 
-**尤其是 ssc 虽然不依赖系统 Shell，但运行时会将解释器（如 /bin/sh 等）提取到 /tmp/ssc/XXXXXX 路径下，并通过它传递 Shell 脚本。因此，只要监控或 Hook 该路径下解释器的执行过程，就有可能窃取 Shell 脚本内容。**
+**尤其是 ssc 虽然不依赖系统 Shell，但运行时会将解释器（如 /bin/sh 等）提取到 /tmp/ssc/XXXXXX 路径下，并通过它传递 Shell 脚本。因此，只要监控或挂钩该路径下解释器的执行过程，就有可能窃取 Shell 脚本内容。**
 
 相比之下，HimitsuShell 不会将解释器提取到二进制文件之外，因此更为安全。

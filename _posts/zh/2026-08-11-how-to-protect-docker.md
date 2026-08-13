@@ -6,7 +6,7 @@ title: "Docker 镜像与容器源代码保护方法（Python、C/C++、Shell 脚
 Docker 镜像中的源代码和可执行文件，默认情况下任何人都可以查看和使用。  
 不过有几种方法可以防止他人查看 Docker 镜像中的源代码，让只有获得授权的人才能使用。
 
-## 1. 多阶段构建(Multi-stage build)
+## 1. 多阶段构建（Multi-stage build）
 这是 Docker 默认提供的镜像构建功能。  
 可以只选取前一构建阶段中的特定文件，复制到当前阶段中。  
 未被指定的文件不会包含在最终镜像里，这样既能减小镜像体积，又能防止不必要的文件暴露给他人。
@@ -25,7 +25,7 @@ COPY --from=builder /var/work/public.txt .
 ## 2. 按文件类型进行混淆、应用 DRM
 如上所述，使用多阶段构建可以隐藏 Docker 镜像中大部分会暴露出来的文件。  
 但由于多阶段构建的结构特性，最终层中包含的文件仍会原样保留下来。  
-因此需要针对最终层中每种文件(Shell 脚本、C/C++ 程序等)各自的形式，分别应用相应的混淆和 DRM 技术。
+因此需要针对最终层中每种文件（Shell 脚本、C/C++ 程序等）各自的形式，分别应用相应的混淆和 DRM 技术。
 
 ### 2.1 Shell 脚本混淆与 DRM 应用
 
@@ -71,7 +71,7 @@ python dist/foo.py
 
 ### 2.3 C/C++、Objective-C/C++、Swift、Rust、Zig、Kotlin/Native 等
 
-使用基于 LLVM 的混淆工具，可以让 C/C++、Objective-C 等多种语言的混淆强度达到商业级保护工具(VMProtect、Enigma Protector 等)的水平。  
+使用基于 LLVM 的混淆工具，可以让 C/C++、Objective-C 等多种语言的混淆强度达到商业级保护工具（VMProtect、Enigma Protector 等）的水平。  
 下面以 C/C++ 代码为例，使用 HimitsuObfuscator 来演示一下。
 
 |混淆工具|LLVM 版本|许可证|商业用途|维护状态|值得关注的点|
@@ -103,7 +103,7 @@ sudo apt-get install -y build-essential
 ```
 
 ## 总结
-综合运用上述方法，基本可以防范像脚本小子(script kiddie)这类新手对源代码的窃取。  
+综合运用上述方法，基本可以防范像脚本小子（script kiddie）这类新手对源代码的窃取。  
 但对于技术娴熟的逆向工程师来说，这些方法只能增加逆向难度、延缓破解进度，并不能使其变得不可能。  
 因此，除了上述方法之外，还必须持续应用各种更高强度的技术。
 
