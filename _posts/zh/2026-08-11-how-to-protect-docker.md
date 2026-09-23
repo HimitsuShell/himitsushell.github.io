@@ -34,12 +34,12 @@ COPY --from=builder /var/work/public.txt .
 接下来我们使用弥补了 shc 漏洞的 HimitsuShell 来试一下。
 
 ```shell
-# 1. download and load docker image
-curl -LO https://github.com/HimitsuShell/Himitsu/releases/download/v1.2.0/himitsu_core_v1.2.0.tar.gz
-docker load -i himitsu_core_v1.2.0.tar.gz
+# 1. download docker image (x86_64_linux_musl)
+curl -LO https://github.com/HimitsuShell/Himitsu/releases/download/v2.1.0/himitsu_core_x86_64_linux_musl.tar.gz
+docker load -i himitsu_core_x86_64_linux_musl.tar.gz
 
 # 2. start container
-docker run --name himitsu_core -d -it himitsu_core:v1.2.0
+docker run --name himitsu_core -d -it himitsu_core
 
 # 3. upload your shell script (must be named launcher.sh)
 docker cp launcher.sh himitsu_core:/var/work/
@@ -83,10 +83,11 @@ python dist/foo.py
 ```shell
 # Required: Ubuntu 24.04
 
-# download and extract obfuscator
-curl -LO https://github.com/HimitsuShell/HimitsuObfuscator/releases/download/v1.2.0_0/himitsu_obfuscator_v1.2.0_0.tar
-tar -xvf himitsu_obfuscator_v1.2.0_0.tar
+# download obfuscator
+curl -LO https://github.com/HimitsuShell/HimitsuObfuscator/releases/download/v2.1.0/himitsu_obfuscator.tar
+tar -xvf himitsu_obfuscator.tar
 
+# create sample source
 vim main.c
 -----------------------------
 #include <stdio.h>
@@ -96,10 +97,12 @@ int main() {
 }
 -----------------------------
 
-# builds a binary that runs on any linux (static musl)
-sudo apt-get install -y build-essential
-./compiler/bin/x86_64-unknown-linux-musl-clang -flto -fuse-ld=lld -mllvm -sobf -mllvm -sub -static main.c -o main
+# build and run (x86_64-linux-gnu)
+apt install -y build-essential
+./bin/clang --target=x86_64-linux-gnu -mllvm -sobf main.c -o main 
 ./main
+
+# supported targets: x86_64-linux-musl, aarch64-linux-gnu, aarch64-linux-musl, etc.
 ```
 
 ## 总结
